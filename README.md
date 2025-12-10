@@ -36,3 +36,10 @@ The main objective of this project is to:
 
 ##  Project Structure
 
+📁 To-Do-List
+┣ 📄 index.html
+┣ 📄 style.css
+┣ 📄 script.js
+┗ 📄 README.md
+
+
