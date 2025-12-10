@@ -27,8 +27,8 @@ The main objective of this project is to:
 
 ##  Technologies Used
 
-- **HTML5** – Structure of the application  
-- **CSS3** – Styling and layout  
+- **HTML** – Structure of the application  
+- **CSS** – Styling and layout  
 - **JavaScript** – Functionality and logic  
 
 
