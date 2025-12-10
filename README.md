@@ -17,13 +17,15 @@ The main objective of this project is to:
 
 ##  Features
 
+## 🔹 Features
+
 ✅ Add new tasks  
-✅ Mark tasks as completed
-✅ Pending tasks
-✅ Edit tasks
+✅ Edit existing tasks  
+✅ Mark tasks as completed  
+✅ View pending tasks  
 ✅ Delete tasks  
 ✅ Responsive and user-friendly design  
-✅ Interactive UI with smooth animations  
+✅ Interactive UI with smooth animations   
 
 ##  Technologies Used
 
