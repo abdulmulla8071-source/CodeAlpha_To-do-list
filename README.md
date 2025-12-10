@@ -47,6 +47,37 @@ The main objective of this project is to:
 ##  How to Run the Project
 
 1. Clone the repository:
+   click this link:- https://github.com/abdulmulla8071-source/CodeAlpha_To-do-list/blob/main/todolist.html
+2. Open `index.html` in your browser  
+3. Start adding your tasks ✅
+
+
+##  Internship Details
+
+- **Internship Role:** Web Development Intern  
+- **Organization:** CodeAlpha  
+- **Task Name:** To-Do List Web Application  
+
+
+## 🔹 Screenshots
+
+(Add screenshots here if you want)
+
+---
+
+## 🔹 Author
+
+**Abdul Mulla**  
+Web Development Intern at **CodeAlpha**
+
+🔗 GitHub Profile:
+
+---
+
+## 🔹 Acknowledgement
+
+I would like to thank **CodeAlpha** for providing this opportunity to enhance my web development skills through practical tasks.
+
 
 
 
