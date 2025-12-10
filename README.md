@@ -4,7 +4,7 @@
 
 A simple and interactive **To-Do List Web Application** built as part of my **Web Development Internship at CodeAlpha**.
 
-This project helps users manage their daily tasks efficiently by allowing them to add, complete, and delete tasks with a clean and responsive UI.
+This project helps users manage their daily tasks efficiently by allowing them to Add, Pending, complete, Edit, and delete tasks with a clean and responsive UI.
 
 
 ## Project Objective
@@ -17,10 +17,8 @@ The main objective of this project is to:
 
 ##  Features
 
-## 🔹 Features
-
 ✅ Add new tasks  
-✅ Edit existing tasks  
+✅ Edit the  tasks  
 ✅ Mark tasks as completed  
 ✅ View pending tasks  
 ✅ Delete tasks  
@@ -59,24 +57,20 @@ The main objective of this project is to:
 - **Task Name:** To-Do List Web Application  
 
 
-## 🔹 Screenshots
-
-(Add screenshots here if you want)
-
----
-
-## 🔹 Author
+##  Author
 
 **Abdul Mulla**  
 Web Development Intern at **CodeAlpha**
 
-🔗 GitHub Profile:
+🔗 GitHub Profile:https://github.com/abdulmulla8071-source
 
 ---
 
 ## 🔹 Acknowledgement
 
 I would like to thank **CodeAlpha** for providing this opportunity to enhance my web development skills through practical tasks.
+
+**Thank You**
 
 
 
