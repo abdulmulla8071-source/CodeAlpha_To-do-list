@@ -68,7 +68,7 @@ Web Development Intern at **CodeAlpha**
 
 ## 🔹 Acknowledgement
 
-I would like to thank **CodeAlpha** for providing this opportunity to enhance my web development skills through practical tasks.
+I would like to thank You **CodeAlpha** for providing this opportunity to enhance my web development skills through practical tasks.
 
 **Thank You**
 
