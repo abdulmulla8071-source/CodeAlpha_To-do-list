@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Age Calculator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#25a6f0bc,#e646ce);
+}
+.container{
+    width:800px;
+    padding:150px;
+    background:#f7159913;
+    border-radius:16px;
+    text-align:center;
+    box-shadow:0 20px 35px rgba(0,0,0,.25);
+}
+h2{
+    font-size:50px;
+    margin-bottom:40px;
+}
+.input-group{
+    display:flex;
+    gap:10px;
+}
+input{
+    width:120%;
+    padding:20px;
+    font-size:30px;
+    font-weight:bold;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+button{
+    width:100%;
+    margin-top:30px;
+    padding:35px;
+    font-size:40px;
+    font-weight:bold;
+    background:#667eea;
+    color:#fff;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+}
+button:hover{
+    background:#5a67d8;
+}
+.result
+{
+    margin-top:55px;
+    font-size:36px;
+    font-weight:bold;
+}
+.error{
+    margin-top:40px;
+    color:red;
+    font-size:30px;
+    font-weight:bold;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Age Calculator</h2>
+    <div class="input-group">
+        <input id="day" type="number" placeholder="Day">
+        <input id="month" type="number" placeholder="Month">
+        <input id="year" type="number" placeholder="Year">
+    </div>
+    <button onclick="calculateAge()">Calculate Age</button>
+    <p class="error" id="error"></p>
+    <p class="result" id="result"></p>
+</div>
+<script>
+function calculateAge(){
+    const d = day.value, m = month.value, y = year.value;
+    error.textContent = result.textContent = "";
+
+    if(!d || !m || !y) return error.textContent = "Please fill all fields";
+
+    const birth = new Date(y, m-1, d), today = new Date();
+    if(birth > today) return error.textContent = "Invalid Date of Birth";
+
+    let Y = today.getFullYear()-birth.getFullYear(),
+        M = today.getMonth()-birth.getMonth(),
+        D = today.getDate()-birth.getDate();
+
+    if(D < 0){ M--; D += new Date(today.getFullYear(), today.getMonth(), 0).getDate(); }
+    if(M < 0){ Y--; M += 12; }
+
+    result.innerHTML = `<strong>Your Age:</strong><br>${Y} Years, ${M} Months, ${D} Days`;
+}
+</script>
+</body>
+</html>
