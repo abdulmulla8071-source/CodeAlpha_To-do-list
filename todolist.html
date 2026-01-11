@@ -2,89 +2,140 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>To-Do</title>
+<title>To-Do List</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 *{
-    margin:0;padding:0;box-sizing:border-box;font-family:Poppins
- }
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Poppins,sans-serif;
+}
 body{
-  min-height:100vh;display:flex;justify-content:center;align-items:center;
-  background:linear-gradient(120deg,#f808a0,#6e029c,#06eaea,#c0225f);
-  background-size:300% 300%;animation:bg 18s infinite;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(#ba38d7,#ee4f77,#ea06d7);
 }
-@keyframes bg{50%{background-position:100% 50%}}
 .app{
-  width:1100px;padding:40px;border-radius:20px;
-  background:rgba(255,255,255,.18);backdrop-filter:blur(15px);
+  width:1100px;
+  padding:65px;
+  border-radius:20px;
+  background:rgba(255, 255, 255, 0.275);
+  backdrop-filter:blur(15px);
 }
-h1{color:#fff;text-align:center;margin-bottom:25px;font-size:52px}
-
-.top{display:flex;gap:15px}
+h1{
+  text-align:center;
+  color:#fff;
+  margin-bottom:25px;
+  font-size:62px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.top{
+  display:flex;
+  gap:15px;
+}
 input,button{
-  padding:24px;font-size:28px;border-radius:18px;border:none
+  padding:24px;
+  font-size:38px;
+  border:none;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  border-radius:18px;
 }
-input{flex:1}
-button{background:#4a90e2;color:#fff;font-weight:600;cursor:pointer}
-
-.boxes{display:grid;grid-template-columns:1fr 1fr;gap:25px;margin-top:30px}
-.box{background:#fff;border-radius:20px;padding:20px}
-.box h2{text-align:center;font-size:36px;margin-bottom:15px}
-
-ul{list-style:none}
+input{flex:1;}
+button{
+  background:#4a90e2;
+  color:#fff;
+  font-weight:bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  cursor:pointer;
+}
+.boxes{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+  margin-top:30px;
+}
+.box{
+  background:#fff;
+  border-radius:20px;
+  padding:20px;
+}
+.box h2{
+  text-align:center;
+  font-size:46px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom:15px;
+}
+ul{list-style:none;}
 li{
-  background:#f3f3f3;padding:18px;margin-bottom:12px;
-  display:flex;justify-content:space-between;align-items:center;
-  border-radius:14px;font-size:20px
+  background:#f3f3f3;
+  padding:18px;
+  margin-bottom:12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-radius:14px;
+  font-size:35px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.done{background:#ccffd8;text-decoration:line-through}
-
+.done{
+  background:#ccffd8;
+  text-decoration:line-through;
+}
 li button{
-  border:none;border-radius:12px;padding:10px;
-  margin-left:6px;color:#fff;font-size:18px
+  border:none;
+  padding:10px;
+  margin-left:6px;
+  border-radius:12px;
+  color:#fff;
+  font-size:18px;
 }
-.ok{background:#00c853}
-.edit{background:#ffb300}
-.del{background:#ff1744}
+.ok{background:#00c853;}
+.edit{background:#ffb300;}
+.del{background:#ff1744;}
 </style>
 </head>
 <body>
 <div class="app">
 <h1>To-Do List</h1>
-
 <div class="top">
   <input id="inp" placeholder="Enter task">
-  <button onclick="add()">Add</button>
+  <button onclick="addTask()">Add</button>
 </div>
 <div class="boxes">
-  <div class="box"><h2>⏳ Pending Tasks</h2><ul id="p"></ul></div>
-  <div class="box"><h2>✅ Completed Tasks</h2><ul id="c"></ul></div>
+  <div class="box"><h2>⏳ Pending Tasks</h2><ul id="pending"></ul></div>
+  <div class="box"><h2>✅ Completed Tasks</h2><ul id="completed"></ul></div>
 </div>
 </div>
 <script>
-const p=document.getElementById("p"),
-      c=document.getElementById("c"),
-      i=document.getElementById("inp");
+const pending = document.getElementById("pending"),
+      completed = document.getElementById("completed"),
+      input = document.getElementById("inp");
 
-function add(){
-  if(!i.value.trim())return;
-  const li=document.createElement("li");
-  li.innerHTML=`
-    <span>${i.value}</span>
+function addTask(){
+  if(!input.value.trim()) return;
+
+  const li = document.createElement("li");
+  li.innerHTML = `
+    <span>${input.value}</span>
     <div>
       <button class="ok">✔</button>
       <button class="edit">✎</button>
       <button class="del">✖</button>
     </div>`;
-  li.querySelector(".ok").onclick=()=>
-    li.classList.toggle("done")?c.append(li):p.append(li);
-  li.querySelector(".del").onclick=()=>li.remove();
-  li.querySelector(".edit").onclick=()=>{
-    let t=prompt("Edit",li.children[0].innerText);
-    if(t)li.children[0].innerText=t;
+  li.querySelector(".ok").onclick = () =>
+    li.classList.toggle("done") ? completed.append(li) : pending.append(li);
+
+  li.querySelector(".del").onclick = () => li.remove();
+
+  li.querySelector(".edit").onclick = () => {
+    const t = prompt("Edit task", li.firstElementChild.innerText);
+    if(t) li.firstElementChild.innerText = t;
   };
-  p.append(li); i.value="";
+  pending.append(li);
+  input.value = "";
 }
 </script>
 </body>
