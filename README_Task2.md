@@ -1,86 +1,68 @@
+# CodeAlpha_task.2
 
-# CodeAlpha_Task 2
+# Age Calculator Web App
 
-## Age Calculator Web App
+A simple and interactive **Age Calculator Web Application** built as part of my **Web Development Internship at CodeAlpha**.
 
-A simple and responsive **Age Calculator Web Application** developed as **Task 2** during my **Web Development Internship at CodeAlpha**. This project calculates a user’s exact age in **Years, Months, and Days** based on their Date of Birth.
-
----
-
-## 📌 Project Objective
-
-The objective of this project is to:
-
-* Practice HTML, CSS, and JavaScript
-* Understand JavaScript **Date Object**
-* Learn **DOM Manipulation**
-* Implement **input validation**
-* Build a real-world interactive web application
+This project allows users to calculate their exact age in **Years, Months, and Days** by entering their Date of Birth with a clean and responsive UI.
 
 ---
 
-## 🚀 Features
+## Project Objective
 
-* User inputs **Day, Month, and Year** of birth
-* Calculates age in **Years, Months, and Days**
-* Validates empty inputs
-* Prevents future date selection
-* Clean and user-friendly UI
-* Responsive and beginner-friendly design
+The main objective of this project is to:
+- Practice **HTML, CSS, and JavaScript**
+- Understand **JavaScript Date Object**
+- Learn **DOM manipulation**
+- Build a real-world functional web application
+- Improve design skills with CSS
 
----
+## Features
 
-## 🛠️ Technologies Used
+✅ Enter Date of Birth (Day, Month, Year)  
+✅ Calculate age in **Years, Months, and Days**  
+✅ Input validation for empty fields  
+✅ Prevent future date selection  
+✅ Clean and user-friendly design  
+✅ Responsive layout  
 
-* **HTML** – Structure of the web page
-* **CSS** – Styling and layout design
-* **JavaScript** – Logic and age calculation
+## Technologies Used
 
----
+- **HTML** – Structure of the application  
+- **CSS** – Styling and layout  
+- **JavaScript** – Age calculation logic  
 
-## 🧠 Key Concepts Applied
+## Project Structure
 
-* DOM Manipulation
-* JavaScript Date & Time
-* Event Handling
-* Input Validation
+📁 Age-Calculator  
+┣ 📄 Age.html  
+┗ 📄 README.md  
 
----
+## How to Run the Project
 
-## 📂 Project Files
+1. Clone the repository  
+   click this link:- https://github.com/abdulmulla8071-source/CodeAlpha_To-do-list/blob/main/Age.html  
+2. Open `Age.html` in your browser  
+3. Enter your Date of Birth  
+4. Click **Calculate Age**  
 
-* `Age.html` – Main Age Calculator application file
-* `README.md` – Project documentation
+## Internship Details
 
----
+- **Internship Role:** Web Development Intern  
+- **Organization:** CodeAlpha  
+- **Task Name:** Age Calculator Web Application  
 
-## ▶️ How to Run the Project
+## Author
 
-1. Download or clone the repository
-2. Open `Age.html` in any modern web browser
-3. Enter your Date of Birth
-4. Click **Calculate Age**
-5. View your age in Years, Months, and Days
+**Abdul Mulla**  
+Web Development Intern at **CodeAlpha**
 
----
-
-## 📸 Output
-
-The application displays the calculated age clearly after valid input is provided.
-
----
-
-## ✅ Internship Task
-
-This project is completed as **Task 2** of the **CodeAlpha Web Development Internship**.
+🔗 GitHub Profile: https://github.com/abdulmulla8071-source
 
 ---
 
-## 👤 Author
+## 🔹 Acknowledgement
 
-**Abdul Mulla**
-Web Development Intern – CodeAlpha
+I would like to thank **CodeAlpha** for providing this opportunity to enhance my web development skills through practical tasks.
 
----
-
-⭐ *Feel free to star the repository if you like the project!*
+**Thank You**
